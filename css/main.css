@@ -93,18 +93,14 @@ header.major {
   padding-bottom: 2em;
 }
 header.special {
-  padding-top: 7em;
   position: relative;
   text-align: center;
 }
 header.special:before, header.special:after {
-  border-bottom: solid 1.5px;
-  border-top: solid 1.5px;
   content: '';
   height: 7px;
   opacity: 0.1;
   position: absolute;
-  top: 1.75em;
   width: 43%;
 }
 header.special:before {
@@ -120,15 +116,14 @@ header.special h2 + p {
 }
 header.special .icon {
   cursor: default;
-  height: 7em;
+  height: 3em;
   left: 0;
-  position: absolute;
   text-align: center;
-  top: 1em;
+  top: -1em;
   width: 100%;
 }
 header.special .icon:before {
-  font-size: 3.5em;
+  font-size: 3em;
   opacity: 0.35;
 }
 
@@ -313,7 +308,7 @@ table.default thead {
   background-attachment: scroll, scroll, scroll, fixed;
   background-color: #645862;
   background-image: url("../img/light-bl.svg"), url("../img/light-br.svg"), url("../img/overlay.png"), url("../img/100_0302.jpg");
-  background-position: bottom left, bottom right, top left, top center;
+  background-position: bottom left, bottom right, top left, bottom center;
   background-repeat: no-repeat, no-repeat, repeat, no-repeat;
   background-size: 25em, 25em, auto, cover;
   color: white;
@@ -375,7 +370,7 @@ table.default thead {
   margin: 2em 0 0 0;
 }
 
-/* SPECIAL */
+/* PURPLE BAR */
 linedbar {
   width: 100%;
   height: 12px;
@@ -383,4 +378,29 @@ linedbar {
   display: block;
   top: 0px;
   background-color: #9A01CD;
+}
+
+/* MAIN SECTION */
+#main {
+  /*background-image: url("../img/dark-tl.svg"), url("../img/dark-tr.svg"), url("../img/dark-bl.svg"), url("../img/dark-br.svg");
+  background-position: top left, top right, bottom left, bottom right;
+  background-repeat: no-repeat;
+  background-size: 25em;*/
+  padding: 7em 0;
+}
+#main > :last-child {
+  margin-bottom: 0;
+}
+#main .sidebar section {
+  border-top: solid 1px rgba(124, 128, 129, 0.2);
+  margin: 3em 0 0 0;
+  padding: 3em 0 0 0;
+}
+#main .sidebar section:first-child {
+  border-top: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+body.index #main {
+  padding-top: 5em;
 }
