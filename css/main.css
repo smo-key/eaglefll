@@ -317,6 +317,42 @@ table.default thead {
   color: #fff;
 }
 
+/* IMAGES */
+.image {
+  border: 0;
+  position: relative;
+}
+.image:before {
+  background: url("img/overlay.png");
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.image.fit {
+  display: block;
+}
+.image.fit img {
+  display: block;
+  width: 100%;
+}
+.image.featured {
+  display: inline-block;
+  margin: 0 0 2em 0;
+  height: 28%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 90%;
+  min-width: 140px;
+  max-width: 100%;
+  padding: 1em;
+  border-radius: 12px;
+  box-shadow: 0px 0px 28px #7c8081;
+}
+
 /* PRIMARY BANNER */
 @-moz-keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
 @-webkit-keyframes reveal-banner { 0% { opacity: 0; } 100% { opacity: 1; } }
@@ -402,10 +438,10 @@ linedbar {
 
 /* MAIN SECTION */
 #main {
-  /*background-image: url("../img/dark-tl.svg"), url("../img/dark-tr.svg"), url("../img/dark-bl.svg"), url("../img/dark-br.svg");
-  background-position: top left, top right, bottom left, bottom right;
+  background-image: url("../img/dark-bl.svg"), url("../img/dark-br.svg");
+  background-position: bottom left, bottom right;
   background-repeat: no-repeat;
-  background-size: 25em;*/
+  background-size: 25em;
   padding: 7em 0;
 }
 #main > :last-child {
